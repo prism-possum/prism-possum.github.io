@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ribeye+Marrow:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+  <link rel="stylesheet" href="news.css">
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<body>
+  <nav class="navbar" id = "navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html">
+          <button class = "home navbar-btn">
+            <img
+            src="icon4173-2yo-200w.png"
+            alt="icon4173"
+            class="dashboard-icon"
+          /><div class = "home-text">PRISM</div></button></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="pronounsPageOne.html"><button class = "navbar-right-btn navbar-btn">pronouns</button></a></li>
+          <li><a href="identities.html"><button class = "navbar-right-btn navbar-btn">identities</button></a></li>
+          <li><a href="chat.html"><button class = "navbar-right-btn navbar-btn">askPossum</button></a></li>
+          <li><a href="news.html"><button class = "navbar-right-btn navbar-btn">news</button></a></li>
+          <li><a href="about.html"><button class = "navbar-right-btn navbar-btn">about</button></a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="center-content">
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-sm-4">
+            <h3>Twitter updates!</h3>
+            <!-- Twitter embed code -->
+            <a class="twitter-timeline" href="https://twitter.com/PinkNews" data-tweet-limit="1">Tweets by PinkNews</a>
+          
+
+        </div>
+        <div class = "col-sm-1"></div>
+        <div class = "col-sm-7">
+          <div class="embed-container">
+            <h3 class="news-article-title">LGBTQ+ News Articles!</h3> <!-- Added a new class to the news article title -->
+          <div class="embed-container white-box">
+            <!-- Embedded news website using an iframe -->
+            <iframe src="https://www.thepinknews.com/" width="90%" height="585px" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+      </div>
+      
+    
+  </div>
+</body>
+</html>
