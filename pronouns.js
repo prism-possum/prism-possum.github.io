@@ -119,50 +119,53 @@ function generateText() {
 
 function checkText() {
     if (textNum == 0) {
-        isCorrect = (document.getElementById("apple1").value == subject
-        && document.getElementById("apple1").value == possAdj
-        && document.getElementById("apple1").value == subject
-        && document.getElementById("apple1").value == possAdj
-        && document.getElementById("apple1").value == possAdj
-        && document.getElementById("apple1").value == possAdj
-        && document.getElementById("apple1").value == subject
-        && document.getElementById("apple1").value == object
-        && document.getElementById("apple1").value == object
+        isCorrect = (document.getElementById("apple1").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("apple1").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("apple1").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("apple1").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("apple1").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("apple1").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("apple1").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("apple1").value.toLowerCase() == object.toLowerCase()
+        && document.getElementById("apple1").value.toLowerCase() == object.toLowerCase()
         );
+  
     } else if (textNum == 1) {
-        isCorrect = (document.getElementById("quill1").value == subject
-        && document.getElementById("quill2").value == reflexive
-        && document.getElementById("quill3").value == possAdj
-        && document.getElementById("quill4").value == subject
-        && document.getElementById("quill5").value == subject
-        && document.getElementById("quill6").value == subject
-        && document.getElementById("quill7").value == subject
-        && document.getElementById("quill8").value == subject
-        && document.getElementById("quill9").value == possAdj
-        && document.getElementById("quill10").value == subject
-        && document.getElementById("quill11").value == object
+        isCorrect = (document.getElementById("quill1").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("quill2").value.toLowerCase() == reflexive.toLowerCase()
+        && document.getElementById("quill3").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("quill4").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("quill5").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("quill6").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("quill7").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("quill8").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("quill9").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("quill10").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("quill11").value.toLowerCase() == object.toLowerCase()
         );
+  
     } else if (textNum == 2) {
-        isCorrect = (document.getElementById("mishap1").value == reflexive
-        && document.getElementById("mishap2").value == subject
-        && document.getElementById("mishap3").value == subject
-        && document.getElementById("mishap4").value == subject
-        && document.getElementById("mishap5").value == possAdj
-        && document.getElementById("mishap6").value == possAdj
-        && document.getElementById("mishap7").value == subject
-        && document.getElementById("mishap8").value == subject
-        && document.getElementById("mishap9").value == subject
-        && document.getElementById("mishap10").value == possAdj
+      isCorrect = (document.getElementById("mishap1").value.toLowerCase() == reflexive.toLowerCase()
+        && document.getElementById("mishap2").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("mishap3").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("mishap4").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("mishap5").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("mishap6").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("mishap7").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("mishap8").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("mishap9").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("mishap10").value.toLowerCase() == possAdj.toLowerCase()
         );
+  
     } else {
-        isCorrect = (document.getElementById("artifact1").value == subject
-        && document.getElementById("artifact2").value == possAdj
-        && document.getElementById("artifact3").value == subject
-        && document.getElementById("artifact4").value == subject
-        && document.getElementById("artifact5").value == possAdj
-        && document.getElementById("artifact6").value == possAdj
+        isCorrect = (document.getElementById("artifact1").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("artifact2").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("artifact3").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("artifact4").value.toLowerCase() == subject.toLowerCase()
+        && document.getElementById("artifact5").value.toLowerCase() == possAdj.toLowerCase()
+        && document.getElementById("artifact6").value.toLowerCase() == possAdj.toLowerCase()
         );
-
+  
     }
     console.log(isCorrect + " correct?");
     if (isCorrect) {
@@ -242,7 +245,7 @@ function correctBlanks() {
     $("#apple9").val(object);
   }
   if (textNum == 1) {
-    $('#quill1').val(reflexive);
+    $('#quill1').val(subject);
     $('#quill2').val(reflexive);
     $("#quill3").val(possAdj);
     $("#quill4").val(subject);
@@ -255,7 +258,7 @@ function correctBlanks() {
     $("#quill11").val(object);
   }
   if (textNum == 2) {
-    $('#mishap1').val(subject);
+    $('#mishap1').val(reflexive);
     $("#mishap2").val(subject);
     $("#mishap3").val(subject);
     $("#mishap4").val(subject);
@@ -267,7 +270,7 @@ function correctBlanks() {
     $("#mishap10").val(possAdj);
   }
   if (textNum == 3) {
-    $('#artifact1').val(possAdj);
+    $('#artifact1').val(subject);
     $("#artifact2").val(possAdj);
     $("#artifact3").val(subject);
     $("#artifact4").val(subject);
@@ -298,4 +301,3 @@ function reset() {
     pronounNum = -1;
     textNum = -1;
 }
-
