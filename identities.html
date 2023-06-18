@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap');
+
+    body {
+      margin: 0;
+      background-color: #ACEBFF; /* New background color */
+      padding-top: 0%;
+      padding-right: 10%;
+      padding-bottom: 20px;
+      padding-left: 10%;
+    }
+
+    .flashcards-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-bottom: 100px;
+      padding-left: 30px;
+    }
+
+    .flashcard {
+      position: relative;
+      background-color: #ACEBFF;
+      /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+      aspect-ratio: 5/8;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+      cursor: pointer;
+    }
+
+    .flashcard-padding {
+      padding-top: 20px;
+      padding-right: 100px;
+      padding-bottom: 40px;
+      padding-left: 100px;
+    }
+
+    .flashcard-front,
+    .flashcard-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backface-visibility: hidden;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      font-family: 'Darker Grotesque', sans-serif;
+    }
+
+    .flashcard-front {
+      transform: rotateY(0deg);
+      z-index: 2; /* Ensure the front element is on top */
+    }
+
+    .flashcard-back {
+      transform: rotateY(180deg);
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500; /* Medium weight */
+      font-size: 22px;
+      color: #333333;
+    }
+
+    .flashcard-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .flashcard.flipped .flashcard-front {
+      transform: rotateY(-180deg);
+    }
+
+    .flashcard.flipped .flashcard-back {
+      transform: rotateY(0deg);
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="flashcards-container">
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/progressflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/LGBTQIA%2B" target="_blank">Progress Flag</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/transflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Transgender" target="_blank">Trans</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/nonbinary flag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Non-binary" target="_blank">Nonbinary</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/intersexflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Intersex" target="_blank">Intersex</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/asexualflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Asexual" target="_blank">Asexual</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/aromanticflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Aromantic" target="_blank">Aromantic</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/bisexualflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Bisexual" target="_blank">Bisexual</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/demisexualflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Demisexual" target="_blank">Demisexual</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/prideflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Rainbow_flag_(LGBT)" target="_blank">Pride Flag</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/gayflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Gay_men" target="_blank">Gay</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/lesbianflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Lesbian" target="_blank">Lesbian</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/pansexualflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Pansexual" target="_blank">Pansexual</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/agenderflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Agender" target="_blank">Agender</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/bigenderflag.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Bigender" target="_blank">Bigender</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/genderfluid.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Genderfluid" target="_blank">Genderfluid</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard flashcard-padding" onclick="flipCard(this)">
+      <div class="flashcard-front" style="background-image: url('flags/genderqueer.png');"></div>
+      <div class="flashcard-back">
+        <div class="flashcard-content">
+          <p>
+            <a href="https://lgbtqia.fandom.com/wiki/Genderqueer" target="_blank">Genderqueer</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function flipCard(card) {
+        card.classList.toggle('flipped');
+      }
+    </script>
+  </div>
+</body>
+</html>
