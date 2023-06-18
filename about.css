@@ -1,0 +1,110 @@
+body {
+    background-color: #ACEBFF;
+    margin: 0;
+    padding: 0;
+    font-family: "Darker Grotesque", sans-serif;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .text-box {
+    background-color: #D8A7FF;
+    width: 800px; /* Adjust the width as needed */
+    text-align: center;
+    padding: 40px;
+    margin: 10px;
+    margin-top: 100px; 
+    border: 4.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    font-family: "Darker Grotesque", sans-serif;
+    color: #333;
+  }
+  .text-box p {
+    margin: 10px 0; /* Add spacing between paragraphs */
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 18px;
+  }
+  .images-container {
+    display: flex;
+    justify-content: space-between; /* Add space between the images */
+    margin-top: 20px; /* Add spacing between the images and the text */
+  }
+  .text-box img {
+    width: 200px; /* Adjust the image size as needed */
+    height: 200px; /* Adjust the image size as needed */
+    object-fit: cover;
+    margin-right: 20px; /* Add spacing between the images */
+    border: 4.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+  }
+  .text-box .first-paragraph {
+    font-weight: bold;
+  }
+  .text-box .text-content {
+    margin-top: 20px;
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 18px;
+  }
+  .text-box .pronouns {
+    font-style: italic;
+  }
+.dashboard-icon {
+  top: 8px;
+  left: 35px; 
+  width: 67px;
+  height: 84px;
+  position: absolute;
+}
+
+
+#navbar {
+    background-color: #FFF5DA;
+}
+
+
+
+.home {
+    width: 300px; 
+    background-color: #D8A7FF;
+    font-family: "Ribeye Marrow";
+    font-size: 50px;
+    font-weight: 500;
+    height: 80px; 
+    
+    
+  }
+  
+  .home-text {
+    margin-left:70px;
+    color: black;
+  }
+  
+  .navbar-right-btn {
+    background-color: white;
+    width: 160px; 
+    margin-left: -10px; 
+    margin-right: -10px;
+    font-family: "Darker Grotesque";
+    font-size: 30px;
+    font-weight: 600;
+    height: 55px;
+    padding-bottom: 10px;
+    color: black;
+    
+  }
+  
+  .navbar-btn {
+    
+    border-radius: 55px;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-width: 3.5px;
+  
+  }
+  
+  .navbar-right-btn:hover {
+    background-color:#D8A7FF;
+  }
+  

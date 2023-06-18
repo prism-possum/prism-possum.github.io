@@ -1,0 +1,95 @@
+img {
+    max-width: 100%;
+    max-height: 100vh;
+    margin-left: 22px;
+    height: auto;
+}
+
+body {
+    background-color: #ACEBFF;
+    font-family: "Darker Grotesque";
+    font-size: 18px; 
+    color: black;
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding-bottom: 0;
+    }
+}
+
+.dashboard-icon {
+  top: 8px;
+  left: 17px; 
+  width: 67px;
+  height: 84px;
+  position: absolute;
+}
+
+
+#navbar {
+    background-color: #FFF5DA;
+}
+.comp {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 1px;
+    padding-bottom: 15px;
+    
+    background-color: #D8A7FF;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: black;
+}
+
+#possum {
+    background-color: #FFF5DA; 
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.5);
+    
+
+}
+
+.home {
+    width: 300px; 
+    background-color: #D8A7FF;
+    font-family: "Ribeye Marrow";
+    font-size: 50px;
+    font-weight: 500;
+    height: 80px; 
+    
+    
+  }
+  
+  .home-text {
+    margin-left:70px;
+    color: black;
+  }
+  
+  .navbar-right-btn {
+    background-color: white;
+    width: 160px; 
+    margin-left: -10px; 
+    margin-right: -10px;
+    font-family: "Darker Grotesque";
+    font-size: 30px;
+    font-weight: 600;
+    height: 55px;
+    padding-bottom: 10px;
+    color: black;
+    
+  }
+  
+  .navbar-btn {
+    
+    border-radius: 55px;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-width: 3.5px;
+  
+  }
+  
+  .navbar-right-btn:hover {
+    background-color:#D8A7FF;
+  }
+  
